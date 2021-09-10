@@ -5,14 +5,11 @@ import random
 import pandas as pd
 import csv
 
-#Change the School data here
+
 df = pd.read_csv("School2.csv")
 data = df["Math_score"].tolist()
 
 
-##  code to find the mean of 100 data points 1000 times 
-#function to get the mean of the given data samples
-# pass the number of data points you want  as counter
 def random_set_of_mean(counter):
     dataset = []
     for i in range(0, counter):
@@ -30,7 +27,7 @@ for i in range(0,1000):
     mean_list.append(set_of_means)
 
 
-## calculating mean and standard_deviation of the sampling distribution.
+## calculating the mean and standard_deviation of the sampling distribution.
 std_deviation = statistics.stdev(mean_list)
 mean = statistics.mean(mean_list)
 print("mean of sampling distribution:- ",mean)
